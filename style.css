@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --whitesmoke: #e0e0e0;
+  --light-grey: #ececec;
+  --grey: #c4c4c4;
+  --medium-gray: #a7a7a7;
+  --deep-gray: #343434;
+  --black: #000000;
+  --blue: #1b77f3;
+  --red: #cf3c3f;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+}
+main {
+  display: flex;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  min-height: 100vh;
+  width: 100%;
+  padding: clamp(35px, 8%, 75px);
+}
+
+.login .img-logo {
+  width: 130px;
+  margin-bottom: 80px;
+}
+
+.login h1 {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+  color: var(--deep-gray);
+}
+
+.login .login-label {
+  display: block;
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+
+.login .login-label .input {
+  width: 100%;
+  background-color: var(--light-grey);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 25px 10px 10px;
+  font-weight: 600;
+  color: var(--deep-gray);
+}
+
+.login .login-label span {
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--medium-gray);
+  margin: 20px;
+  cursor: text;
+  transition: 200ms ease;
+}
+
+.login .login-label .input:focus {
+  background-color: var(--whitesmoke);
+  border: 2px solid var(--deep-gray);
+}
+
+.login .login-label .span-active {
+  font-size: 0.7em;
+  margin: 8px 10px;
+}
+
+.login .rede-socials {
+  width: 100%;
+}
+
+.login .rede-socials button {
+  cursor: pointer;
+  padding: 10px;
+  display: inline-block;
+  width: 32%;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.login .rede-socials button i {
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.login .rede-socials .button-face:hover {
+  background-color: #1869d3;
+}
+
+.login .rede-socials .button-google:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.login .rede-socials .button-apple:hover {
+  background-color: #141414;
+}
+
+.login .rede-socials .button-face {
+  background-color: var(--blue);
+}
+
+.login .rede-socials .button-face i {
+  color: var(--white);
+}
+
+.login .rede-socials .button-google {
+  background-color: var(--light-grey);
+}
+
+.login .rede-socials .button-google i {
+  color: #ee1717;
+}
+
+.login .rede-socials .button-apple {
+  background-color: #000000;
+}
+
+.login .rede-socials .button-apple i {
+  color: white;
+}
+
+.login-label-checkbox {
+  width: 100%;
+  margin: 15px 0 50px;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.input-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(201, 190, 190);
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.input-checkbox:checked {
+  background-color: crimson;
+}
+
+.input-checkbox:checked::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: 3px solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  margin: 2px 6px;
+}
+
+.login .login-button {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.login .login-button i {
+  font-size: 30px;
+  color: white;
+}
+
+.login .login-button:disabled {
+  cursor: auto;
+  background-color: white;
+  border: 2px solid var(--light-grey);
+}
+
+.login .login-button:disabled i {
+  color: var(--grey);
+}
+
+.login .login__link {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: var(--medium-grey);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.wallpaper {
+  width: 100%;
+  background-image: url(images/wallpaper.jpg);
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+}
+
+@media (max-width: 294px) {
+  .login .rede-socials button {
+    width: 30%;
+  }
+}
